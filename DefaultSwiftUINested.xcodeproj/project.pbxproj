@@ -15,6 +15,7 @@
 		67C80BCC294884AB004FE86E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C80BCA294884AB004FE86E /* LaunchScreen.storyboard */; };
 		67C80BD429488577004FE86E /* MsgCaptureTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BD329488577004FE86E /* MsgCaptureTableView.swift */; };
 		67C80BD6294885C0004FE86E /* MsgCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BD5294885C0004FE86E /* MsgCaptureVC.swift */; };
+		67C80BD929488EA2004FE86E /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 67C80BD829488EA2004FE86E /* LookinServer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C80BD929488EA2004FE86E /* LookinServer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = DefaultSwiftUINested;
+			packageProductDependencies = (
+				67C80BD829488EA2004FE86E /* LookinServer */,
+			);
 			productName = DefaultSwiftUINested;
 			productReference = 67C80BBC294884A9004FE86E /* DefaultSwiftUINested.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 67C80BB3294884A9004FE86E;
+			packageReferences = (
+				67C80BD729488EA2004FE86E /* XCRemoteSwiftPackageReference "LookinServer" */,
+			);
 			productRefGroup = 67C80BBD294884A9004FE86E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -366,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		67C80BD729488EA2004FE86E /* XCRemoteSwiftPackageReference "LookinServer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QMUI/LookinServer/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		67C80BD829488EA2004FE86E /* LookinServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67C80BD729488EA2004FE86E /* XCRemoteSwiftPackageReference "LookinServer" */;
+			productName = LookinServer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 67C80BB4294884A9004FE86E /* Project object */;
 }
