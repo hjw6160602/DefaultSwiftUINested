@@ -14,7 +14,7 @@
 		67C80BC9294884AB004FE86E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C80BC8294884AB004FE86E /* Assets.xcassets */; };
 		67C80BCC294884AB004FE86E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C80BCA294884AB004FE86E /* LaunchScreen.storyboard */; };
 		67C80BD429488577004FE86E /* MsgCaptureTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BD329488577004FE86E /* MsgCaptureTableView.swift */; };
-		67C80BD6294885C0004FE86E /* MsgCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BD5294885C0004FE86E /* MsgCaptureVC.swift */; };
+		67C80BD6294885C0004FE86E /* IMMessageCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BD5294885C0004FE86E /* IMMessageCapture.swift */; };
 		67C80BD929488EA2004FE86E /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 67C80BD829488EA2004FE86E /* LookinServer */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		67C80BCB294884AB004FE86E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67C80BCD294884AB004FE86E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67C80BD329488577004FE86E /* MsgCaptureTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgCaptureTableView.swift; sourceTree = "<group>"; };
-		67C80BD5294885C0004FE86E /* MsgCaptureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgCaptureVC.swift; sourceTree = "<group>"; };
+		67C80BD5294885C0004FE86E /* IMMessageCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMMessageCapture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				67C80BBF294884A9004FE86E /* AppDelegate.swift */,
 				67C80BC1294884A9004FE86E /* SceneDelegate.swift */,
 				67C80BC3294884A9004FE86E /* ViewController.swift */,
-				67C80BD5294885C0004FE86E /* MsgCaptureVC.swift */,
+				67C80BD5294885C0004FE86E /* IMMessageCapture.swift */,
 				67C80BD329488577004FE86E /* MsgCaptureTableView.swift */,
 				67C80BC5294884A9004FE86E /* Main.storyboard */,
 				67C80BC8294884AB004FE86E /* Assets.xcassets */,
@@ -155,7 +155,7 @@
 				67C80BC4294884A9004FE86E /* ViewController.swift in Sources */,
 				67C80BC0294884A9004FE86E /* AppDelegate.swift in Sources */,
 				67C80BD429488577004FE86E /* MsgCaptureTableView.swift in Sources */,
-				67C80BD6294885C0004FE86E /* MsgCaptureVC.swift in Sources */,
+				67C80BD6294885C0004FE86E /* IMMessageCapture.swift in Sources */,
 				67C80BC2294884A9004FE86E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

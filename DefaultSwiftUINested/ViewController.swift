@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func imMsgCaptureDicClick(_ sender: Any) {
-        let msgCaptureVC = MsgCaptureVC().makeCaptureView()
+        let msgCaptureVC = IMMessageCapture.shared.captureViewController
         msgCaptureVC.view.backgroundColor = .white
         self.navigationController?.pushViewController(msgCaptureVC, animated: true)
     }
