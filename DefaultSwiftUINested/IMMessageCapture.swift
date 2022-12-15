@@ -17,25 +17,26 @@ class IMMessageCapture: NSObject {
     
     var messageList = [Message]()
     
-    var isAddedNotification = false
-    
-    var observer: NSObjectProtocol?
-    
     private override init() {
         super.init()
     }
     
-    @objc func addNotificationObserver(_ notiName: String) {
-        if isAddedNotification {
-            return
-        }
+    @objc func addNotificationObserver() {
 
         NotificationCenter.default.addObserver(self, selector: #selector(didReceiveImMessageNoti),
                                                name: NotificationNameMessageCapture,
                                                object: nil)
-        isAddedNotification = true
     }
     
+    
+    @objc lazy var captureViewController: UIViewController = {
+        let messageListView = MessageListView(messageList: dataStoreList)
+        let hostViewController = UIHostingController(rootView:  messageListView)
+        return hostViewController
+    }()
+}
+
+extension IMMessageCapture {
     @objc func didReceiveImMessageNoti(_ notification: Notification) {
         let noti = notification.object
         guard noti is [String: Any] else {
@@ -51,14 +52,7 @@ class IMMessageCapture: NSObject {
         if let message = message {
             self.messageList.append(message)
         }
-        print("当前捕获到的消息总数：\(self.messageList.count)")
     }
-    
-    @objc lazy var captureViewController: UIViewController = {
-        let messageListView = MessageListView(messageList: dataStoreList)
-        let hostViewController = UIHostingController(rootView:  messageListView)
-        return hostViewController
-    }()
 }
 
 //#endif
