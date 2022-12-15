@@ -1,21 +1,25 @@
 //
-//  TableViewController.swift
-//  DefaultSwiftUINested
+//  IMMessageCaptureVC.swift
+//  NewQiXiuApp
 //
 //  Created by SaiDiCaprio on 2022/12/13.
+//  Copyright © 2022 iqiyi. All rights reserved.
 //
+
+//#if DEBUG
 
 import UIKit
 import SwiftUI
 
-@objc
 class IMMessageCapture: NSObject {
     
     @objc static let shared = IMMessageCapture()
     
-    let captureView = MsgCaptureTableView()
+    var messageList = [Message]()
     
     var isAddedNotification = false
+    
+    var observer: NSObjectProtocol?
     
     private override init() {
         super.init()
@@ -25,8 +29,10 @@ class IMMessageCapture: NSObject {
         if isAddedNotification {
             return
         }
-        let kNotificationName = Notification.Name(notiName)
-        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveImMessageNoti), name: kNotificationName, object: nil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveImMessageNoti),
+                                               name: NotificationNameMessageCapture,
+                                               object: nil)
         isAddedNotification = true
     }
     
@@ -35,16 +41,24 @@ class IMMessageCapture: NSObject {
         guard noti is [String: Any] else {
             return
         }
-        let message: [String: Any] = noti as! [String: Any]
-        
-        print(message)
+        let jsonDict: [String: Any] = noti as! [String: Any]
+        let jsonString = JSONString(jsonDict)
+
+        let jsonData: Data = jsonString.data(using:String.Encoding.utf8)!
+        let message: Message? = try? JSONDecoder().decode(Message.self,from:jsonData)
+
+        message?.json = jsonString
+        if let message = message {
+            self.messageList.append(message)
+        }
+        print("当前捕获到的消息总数：\(self.messageList.count)")
     }
     
     @objc lazy var captureViewController: UIViewController = {
-        if #available(iOS 13.0, *) {
-            return UIHostingController(rootView:  captureView)
-        } else {
-            return UIViewController()
-        }
+        let messageListView = MessageListView(messageList: dataStoreList)
+        let hostViewController = UIHostingController(rootView:  messageListView)
+        return hostViewController
     }()
 }
+
+//#endif

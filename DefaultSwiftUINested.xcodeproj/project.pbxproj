@@ -13,9 +13,18 @@
 		67C80BC7294884A9004FE86E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C80BC5294884A9004FE86E /* Main.storyboard */; };
 		67C80BC9294884AB004FE86E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C80BC8294884AB004FE86E /* Assets.xcassets */; };
 		67C80BCC294884AB004FE86E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C80BCA294884AB004FE86E /* LaunchScreen.storyboard */; };
-		67C80BD429488577004FE86E /* MsgCaptureTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BD329488577004FE86E /* MsgCaptureTableView.swift */; };
+		67C80BD429488577004FE86E /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BD329488577004FE86E /* MessageListView.swift */; };
 		67C80BD6294885C0004FE86E /* IMMessageCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BD5294885C0004FE86E /* IMMessageCapture.swift */; };
 		67C80BD929488EA2004FE86E /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 67C80BD829488EA2004FE86E /* LookinServer */; };
+		67C80BDB2949D1D8004FE86E /* MessageInfoPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BDA2949D1D8004FE86E /* MessageInfoPanel.swift */; };
+		67C80BDE2949D2EB004FE86E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BDD2949D2EB004FE86E /* Message.swift */; };
+		67C80BE12949D39B004FE86E /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BDF2949D39B004FE86E /* MessageViewModel.swift */; };
+		67C80BE22949D39B004FE86E /* AbilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BE02949D39B004FE86E /* AbilityViewModel.swift */; };
+		67C80BE52949D3C2004FE86E /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BE32949D3C1004FE86E /* Ability.swift */; };
+		67C80BE62949D3C2004FE86E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BE42949D3C1004FE86E /* Pokemon.swift */; };
+		67C80BE82949D4EF004FE86E /* MessageInfoPanelHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BE72949D4EF004FE86E /* MessageInfoPanelHeader.swift */; };
+		67C80BEC2949D644004FE86E /* MessageInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BEB2949D644004FE86E /* MessageInfoRow.swift */; };
+		67C80BEE2949DEB1004FE86E /* MessageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C80BED2949DEB1004FE86E /* MessageDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +36,17 @@
 		67C80BC8294884AB004FE86E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67C80BCB294884AB004FE86E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67C80BCD294884AB004FE86E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67C80BD329488577004FE86E /* MsgCaptureTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgCaptureTableView.swift; sourceTree = "<group>"; };
+		67C80BD329488577004FE86E /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		67C80BD5294885C0004FE86E /* IMMessageCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMMessageCapture.swift; sourceTree = "<group>"; };
+		67C80BDA2949D1D8004FE86E /* MessageInfoPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfoPanel.swift; sourceTree = "<group>"; };
+		67C80BDD2949D2EB004FE86E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		67C80BDF2949D39B004FE86E /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		67C80BE02949D39B004FE86E /* AbilityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbilityViewModel.swift; sourceTree = "<group>"; };
+		67C80BE32949D3C1004FE86E /* Ability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
+		67C80BE42949D3C1004FE86E /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		67C80BE72949D4EF004FE86E /* MessageInfoPanelHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfoPanelHeader.swift; sourceTree = "<group>"; };
+		67C80BEB2949D644004FE86E /* MessageInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfoRow.swift; sourceTree = "<group>"; };
+		67C80BED2949DEB1004FE86E /* MessageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,17 +80,50 @@
 		67C80BBE294884A9004FE86E /* DefaultSwiftUINested */ = {
 			isa = PBXGroup;
 			children = (
+				67C80BEA2949D619004FE86E /* List */,
+				67C80BE92949D4F5004FE86E /* Pannel */,
+				67C80BDC2949D2DB004FE86E /* Model */,
 				67C80BBF294884A9004FE86E /* AppDelegate.swift */,
 				67C80BC1294884A9004FE86E /* SceneDelegate.swift */,
 				67C80BC3294884A9004FE86E /* ViewController.swift */,
 				67C80BD5294885C0004FE86E /* IMMessageCapture.swift */,
-				67C80BD329488577004FE86E /* MsgCaptureTableView.swift */,
 				67C80BC5294884A9004FE86E /* Main.storyboard */,
 				67C80BC8294884AB004FE86E /* Assets.xcassets */,
 				67C80BCA294884AB004FE86E /* LaunchScreen.storyboard */,
 				67C80BCD294884AB004FE86E /* Info.plist */,
 			);
 			path = DefaultSwiftUINested;
+			sourceTree = "<group>";
+		};
+		67C80BDC2949D2DB004FE86E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67C80BE32949D3C1004FE86E /* Ability.swift */,
+				67C80BE42949D3C1004FE86E /* Pokemon.swift */,
+				67C80BE02949D39B004FE86E /* AbilityViewModel.swift */,
+				67C80BDF2949D39B004FE86E /* MessageViewModel.swift */,
+				67C80BDD2949D2EB004FE86E /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67C80BE92949D4F5004FE86E /* Pannel */ = {
+			isa = PBXGroup;
+			children = (
+				67C80BDA2949D1D8004FE86E /* MessageInfoPanel.swift */,
+				67C80BE72949D4EF004FE86E /* MessageInfoPanelHeader.swift */,
+			);
+			path = Pannel;
+			sourceTree = "<group>";
+		};
+		67C80BEA2949D619004FE86E /* List */ = {
+			isa = PBXGroup;
+			children = (
+				67C80BD329488577004FE86E /* MessageListView.swift */,
+				67C80BED2949DEB1004FE86E /* MessageDetailView.swift */,
+				67C80BEB2949D644004FE86E /* MessageInfoRow.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +205,18 @@
 			files = (
 				67C80BC4294884A9004FE86E /* ViewController.swift in Sources */,
 				67C80BC0294884A9004FE86E /* AppDelegate.swift in Sources */,
-				67C80BD429488577004FE86E /* MsgCaptureTableView.swift in Sources */,
+				67C80BD429488577004FE86E /* MessageListView.swift in Sources */,
 				67C80BD6294885C0004FE86E /* IMMessageCapture.swift in Sources */,
+				67C80BEC2949D644004FE86E /* MessageInfoRow.swift in Sources */,
+				67C80BDB2949D1D8004FE86E /* MessageInfoPanel.swift in Sources */,
+				67C80BE22949D39B004FE86E /* AbilityViewModel.swift in Sources */,
+				67C80BE62949D3C2004FE86E /* Pokemon.swift in Sources */,
+				67C80BE52949D3C2004FE86E /* Ability.swift in Sources */,
 				67C80BC2294884A9004FE86E /* SceneDelegate.swift in Sources */,
+				67C80BE82949D4EF004FE86E /* MessageInfoPanelHeader.swift in Sources */,
+				67C80BE12949D39B004FE86E /* MessageViewModel.swift in Sources */,
+				67C80BDE2949D2EB004FE86E /* Message.swift in Sources */,
+				67C80BEE2949DEB1004FE86E /* MessageDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
