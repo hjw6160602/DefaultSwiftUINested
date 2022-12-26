@@ -18,6 +18,21 @@ struct MessageDetailView: View {
                 let title = "\(message.type): \(message.id)"
                 Text(title)
                     .padding(.top, 20)
+                
+                Button (action: self.share) {
+                    if #available(iOS 15.0, *) {
+                        Image(systemName: "square.and.arrow.up")
+                            .symbolRenderingMode(.multicolor)
+                            .aspectRatio(contentMode: .fit)
+                    } else {
+                        Image(systemName: "square.and.arrow.up")
+                            .foregroundColor(.black)
+                            .aspectRatio(contentMode: .fit)
+                    }
+                }
+                .frame(width: 40, height: 40)
+                .padding(.top, 15)
+
             }
             
             Spacer(minLength: 20)
@@ -25,6 +40,20 @@ struct MessageDetailView: View {
         }
         
     }
+    
+    private func share() {
+        // 准备分享的内容
+        let items = [message.json] as [Any]
+        
+        // 创建 UIActivityViewController 实例
+        let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        
+        // 调起分享界面
+        UIApplication.shared.keyWindow?.rootViewController?.present(activityViewController, animated: true)
+        
+    }
+    
+    
 }
 
 @available(iOS 13.0.0, *)
@@ -49,8 +78,9 @@ struct IndentedText: View {
 
 @available(iOS 13.0, *)
 struct MessageDetailView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        let json = "{\"request_id\":\"91A74794-E152-4066-99C2-5615512BC66F\",\"status\":1,\"readable\":true,\"target_id\":\"1718572853_1444862998\",\"created_at\":1671099854774,\"device_id\":\"66d4239d2df35c3a0bdf9ba6a83cfe671116\",\"target_type\":\"channel\",\"channel_info\":{\"is_1on1\":true},\"cnt_seq_id\":203,\"sender_user_id\":\"1444862998\",\"message_id\":\"1718572853_1444862998:254\",\"seq_id\":254,\"persistent\":true,\"sender\":{\"user_id\":\"1444862998\",\"updated_at\":1671099846317},\"countable\":true,\"message_type\":\"MESG\",\"message\":\"{\\\"payloads\\\":{\\\"type\\\":1,\\\"content\\\":\\\"weak\\\"}}\",\"sub_type\":\"1\"}"
+        let json = "{\"seq_id\":\"1\",\"persistent\":\"True\",\"message\":\"{\\\"payloads\\\":{\\\"type\\\":1,\\\"content\\\":\\\"ccjccj\\\"}}\",\"readable\":\"True\",\"request_id\":\"2c18ac43844a4072b49aba280d2d5982\",\"countable\":\"True\",\"message_type\":\"MESG\",\"created_at\":\"1658742728142\",\"sender_user_id\":\"1247575987\",\"target_id\":\"1718572853_1247575987\",\"target_type\":\"channel\",\"cnt_seq_id\":\"1\",\"status\":\"1\",\"message_id\":\"1718572853_1247575987:1\"}"
         
         let msg = Message(id: "1718572853_1247575987:1", type: "MESG", targetType: "channel", targetId: "1718572853_1247575987", json:json.prettyJSON ?? "")
         
